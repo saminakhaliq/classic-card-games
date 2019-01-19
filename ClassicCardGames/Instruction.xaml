@@ -1,0 +1,34 @@
+﻿<Page
+    x:Class="ClassicCardGames.Instruction"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ClassicCardGames"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="#295984">
+        <StackPanel Orientation="Vertical">
+
+            <TextBlock Text="CLASSIC CARD GAMES" FontSize="60" Margin="5" TextAlignment="Center" FontWeight="ExtraLight"  Foreground="#ecc113" />
+
+            <StackPanel Orientation="Vertical" >
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Width="400" >
+
+                    <Image Source="{x:Bind ChosenGame.Image.Source}" Width="200" Margin="5" />
+
+                    <TextBlock Text="{x:Bind ChosenGame.GameName}" Margin="5" FontSize="35" VerticalAlignment="Center" Foreground="#ecc113" FontWeight="ExtraLight" />
+
+                </StackPanel>
+
+                <TextBlock Text="{x:Bind ChosenGame.Instruction}" FontSize="12" VerticalAlignment="Center" Margin="5" TextWrapping="Wrap" Width="400" Foreground="White" FontWeight="ExtraLight"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="400">
+
+                    <Button Content="Start Game" Click="Button_Click" HorizontalAlignment="Center" Width="190" Margin="0,0,10,0" Foreground="#ecc113"/>
+                    <Button HorizontalAlignment="Center" Content="Go Back" Width="190" Click="BackButton_Click2" Foreground="#ecc113"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

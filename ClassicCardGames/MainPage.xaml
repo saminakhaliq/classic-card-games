@@ -1,0 +1,41 @@
+﻿<Page 
+    x:Class="ClassicCardGames.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ClassicCardGames"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="#295984">
+        <StackPanel Orientation="Vertical">
+
+            <TextBlock Text="CLASSIC CARD GAMES" FontSize="60" Margin="50" TextAlignment="Center" FontWeight="ExtraLight"  Foreground="#ecc113" />
+
+            <ListView   x:Name="MainListView" ItemsSource="{x:Bind Games}"  Tapped="MainListView_Tapped">
+
+                <ListView.ItemTemplate>
+
+                    <DataTemplate x:DataType="local:Game">
+
+                        <StackPanel Orientation="Horizontal" >
+
+                            <Image Source="{x:Bind Image.Source}" Width="150" Margin="5" />
+                            <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                                <TextBlock Text="{x:Bind GameName}" VerticalAlignment="Center" Margin="5" Foreground="#ecc113" />
+
+                                <TextBlock Text="{x:Bind Description}" VerticalAlignment="Center" Margin="5" TextWrapping="Wrap" Width="400" Foreground="#ecc113" FontWeight="ExtraLight"/>
+                            </StackPanel>
+                            
+
+                        </StackPanel>
+
+                    </DataTemplate>
+
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+        </StackPanel>
+    </Grid>
+</Page>
